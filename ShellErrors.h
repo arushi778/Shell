@@ -1,0 +1,7 @@
+
+enum class SHELL_ERRORS
+{
+	SUCCESS = 0,
+	UNKNOWN_ERROR = 1,
+	UNKNOWN_COMMAND = 2
+};
