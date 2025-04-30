@@ -1,16 +1,18 @@
-#include"LsCommand.h"
 #include "ShellInterpreter.h"
+#include "LsCommand.h"
+#include <iostream>
 
-void CShellInterpreter::interpret(std::string input,std::string path) {
-    
+bool CShellInterpreter::interpret(const std::string& input) {
     if (input == "exit") {
         exit(0);
     }
     else if (input == "ls") {
         LsCommand ls;
-        ls.run(path);
+        ls.run(); 
+        return true;
     }
     else {
         std::cout << "Command not found.\n";
+        return false;
     }
 }

@@ -1,9 +1,12 @@
 #pragma once
-#include<iostream>
-#include<filesystem>
+#include <string>
+
 class LsCommand {
     std::string m_path;
 
 public:
-    void run(std::string path);
+    void run(const std::string& path); 
+    void run();                        
+private:
+    void runPrivate();
 };

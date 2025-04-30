@@ -2,42 +2,35 @@
 // class CShell
 // Shell class having a loop for taking user input
 // Sends to interpreter and gets ready to pick next user command quickly
+#include "Shell.h"
+#include "ShellEnv.h"
+#include <iostream>
 
-#include "shell.h"
-#include "CommonHeaders.h"
-
-namespace MyShell
-{
-	void CShell::run()
-	{
-		env.setCurrPath("c:\user\<current user>");
-		env.setCurrPath(path)
-		loop(path);
+namespace MyShell {
+	void CShell::run() {
+		ShellEnv::getInstance().setCurrentPath(".");
+		loop();
 	}
 
-	void CShell::loop(std::string path)
-	{
+	void CShell::loop() {
 		std::string command;
-		while (true)
-		{
+
+		while (true) {
 			std::cout << "$ ";
 			std::getline(std::cin, command);
-			if (command.empty())
-			{
+
+			if (command.empty()) {
 				continue;
 			}
 
-			if (m_Interpreter.interpret(command, path) == ERROR)
-			{
-				// print error;
-				continue;
+			if (!m_Interpreter.interpret(command)) {
+				std::cerr << "Error interpreting command.\n";
 			}
-			LsCommand ls = new LsCommand();
-			ls.run();
-			
 		}
 	}
-};
+}
+
+
 
 //namespace MyShell
 //{

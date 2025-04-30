@@ -2,14 +2,18 @@
 //#define __SHELL_INTERPRETER_H__
 #pragma once
 
-#include "CommonHeaders.h"
+//#include "CommonHeaders.h"
 //#include "ShellErrors.h"
 
-class CShellInterpreter
-{
-	public:
-		void interpret(std::string input,std::string path);
+#pragma once
+#include <string>
+
+class CShellInterpreter {
+public:
+    bool interpret(const std::string& input);
 };
+
+
 
 //class CShellInterpreter
 //{
@@ -20,3 +24,5 @@ class CShellInterpreter
 //};
 //
 //#endif	/* __SHELL_INTERPRETER_H__ */
+
+

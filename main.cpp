@@ -23,13 +23,19 @@
 //	return 0;
 //}
 
-int main(int argc, char* argv[])
-{
-	MyShell::CShell shell;
-	//shell.run();
+//int main(int argc, char* argv[])
+//{
+//	MyShell::CShell shell;
+//	//shell.run();
+//
+//	std::string path = (argc > 1) ? argv[1] : ".";
+//	shell.run();
+//	return 0;
+//
+//}
 
-	std::string path = (argc > 1) ? argv[1] : ".";
+int main() {
+	MyShell::CShell shell;
 	shell.run();
 	return 0;
-
 }
