@@ -2,8 +2,6 @@
 //#define __SHELL_INTERPRETER_H__
 #pragma once
 
-//#include "CommonHeaders.h"
-//#include "ShellErrors.h"
 
 #pragma once
 #include <string>
@@ -15,14 +13,5 @@ public:
 
 
 
-//class CShellInterpreter
-//{
-//public:
-//
-//	SHELL_ERRORS interpret(const std::string& command);
-//
-//};
-//
-//#endif	/* __SHELL_INTERPRETER_H__ */
 
 
