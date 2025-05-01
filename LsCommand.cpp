@@ -5,6 +5,7 @@
 
 void LsCommand::run() {
     m_path = ShellEnv::getInstance().getCurrentPath(); 
+    runPrivate();
 }
 
 void LsCommand::run(const std::string& path) {
